@@ -4,13 +4,152 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="style.css" />
 
     <link rel="icon" href="images/dice-tab-icon.svg" />
     <title>Pick Game</title>
   </head>
 
-  <body>
+  <body
+    class="relative flex items-center justify-center font-display h-screen w-screen bg-linear-to-r from-[#0f0c29] via-[#302b63] to-[#24243e]"
+  >
+    <!-- Game Main Section -->
+    <main
+      class="relative w-248 h-150 bg-white/35 shadow-2xl rounded-[9px] flex overflow-hidden"
+    >
+      <!-- Player 0 Panel-->
+      <section
+        class="flex flex-col items-center bg-white/40 w-[50%] p-[5.62rem]"
+      >
+        <h2 class="font-semibold text-[3rem] tracking-wider mb-4">PLAYER 1</h2>
+        <p class="text-[5rem] text-blue-900 mb-30">0</p>
+
+        <div
+          class="flex flex-col items-center justify-evenly w-52 h-[7.52rem] bg-blue-900 rounded-[9px] p-6 text-white tracking-widest"
+        >
+          <p class="text-[1.3rem]">CURRENT</p>
+          <p class="font-semibold text-[2rem]">0</p>
+        </div>
+      </section>
+
+      <!-- Plater 1 Panel -->
+      <section class="flex flex-col items-center w-[50%] p-[5.62rem]">
+        <h2 class="text-[3rem] tracking-wider mb-4">PLAYER 2</h2>
+        <p class="text-[5rem] text-blue-900 mb-30">0</p>
+
+        <div
+          class="flex flex-col items-center justify-evenly w-52 h-[7.52rem] bg-blue-900 rounded-[9px] p-6 text-white tracking-widest"
+        >
+          <p class="text-[1.3rem]">CURRENT</p>
+          <p class="font-semibold text-[2rem]">0</p>
+        </div>
+      </section>
+
+      <!-- Buttons -->
+      <section class="flex flex-col items-center">
+        <button
+          id="new-btn"
+          class="absolute top-6 left-[41%] text-[#444] bg-white/70 px-8 py-[0.7rem] shadow-md rounded-3xl cursor-pointer transition-all active:translate-y-1 duration-100 ease-in"
+        >
+          🔁 NEW GAME
+        </button>
+
+        <button
+          id="rules-btn"
+          class="absolute top-22 left-[42.5%] text-[#444] bg-white/70 px-8 py-[0.7rem] shadow-md rounded-3xl cursor-pointer transition-all active:translate-y-1 duration-100 ease-in"
+        >
+          📝 RULES
+        </button>
+
+        <button
+          id="roll-btn"
+          class="absolute bottom-32 left-[41%] text-[#444] bg-white/70 px-8 py-[0.7rem] shadow-md rounded-3xl cursor-pointer transition-all active:translate-y-1 duration-100 ease-in"
+        >
+          🎲 ROLL DICE
+        </button>
+
+        <button
+          id="hold-btn"
+          class="absolute bottom-16 left-[43%] text-[#444] bg-white/70 px-8 py-[0.7rem] shadow-md rounded-3xl cursor-pointer transition-all active:translate-y-1 duration-100 ease-in"
+        >
+          📥 HOLD
+        </button>
+      </section>
+    </main>
+
+    <!-- Overlay -->
+    <div
+      id="overlay"
+      class="hidden absolute z-10 bg-black/50 w-screen h-screen"
+    ></div>
+
+    <!-- "RULES" Button modal window-->
+    <aside
+      id="rules-modal"
+      class="absolute z-20 top-40 w-180 h-137 bg-white flex flex-col gap-6 px-5 py-3 font-mono text-[#444] rounded-2xl invisible"
+    >
+      <button
+        id="modal-close-btn"
+        class="font-display text-[1.1rem] font-bold self-end cursor-pointer"
+      >
+        X
+      </button>
+
+      <h1 class="text-[1.35rem] uppercase tracking-wide">
+        Welcome to the <span class="font-bold">"Pick Game"</span>!
+      </h1>
+
+      <p>
+        This game was designed to reward the playes's
+        <span class="font-bold italic">best strategy</span> to accumulate the
+        <span class="font-bold italic">💯 maximum score</span>! Only the player
+        with the strongest will and tactic shall win the game!
+        <span class="font-bold italic">Good Luck</span> 🍀!
+      </p>
+
+      <p class="text-[1.1rem]">
+        <span class="font-bold uppercase italic">Rules</span> are very simple:
+      </p>
+
+      <ul class="list-disc list-inside ml-3 leading-8">
+        <li>
+          The first player that starts the game is always
+          <span class="font-bold italic uppercase">"Player 1"</span>;
+        </li>
+        <li>
+          Each player will
+          <span class="font-bold italic uppercase">roll the dice</span> ("🎲
+          ROLL DICE"), to accumulate points in "CURRENT" tab;
+        </li>
+        <li>
+          <span class="font-bold italic uppercase">To transfer</span> the
+          "CURRENT" score to the "PLAYER" score, press the "📥 HOLD" button, and
+          the game will switch to the second player;
+        </li>
+        <li>
+          If a player
+          <span class="font-bold uppercase italic">roll a "1" on the dice</span
+          >, its CURRENT score
+          <span class="font-bold italic uppercase">will be reset</span> and the
+          second player can start to play;
+        </li>
+        <li>
+          First player that reach
+          <span class="font-bold italic uppercase"
+            >100 points win the game</span
+          >
+          🏆!
+        </li>
+      </ul>
+    </aside>
+
     <script src="/script.js"></script>
   </body>
 </html>
