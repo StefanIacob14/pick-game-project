@@ -26,33 +26,41 @@
     >
       <!-- Player 0 Panel-->
       <section
-        class="flex flex-col items-center bg-white/40 w-[50%] p-[5.62rem]"
+        id="player-0"
+        class="flex flex-col items-center bg-white/40 w-[50%] p-[5.62rem] transition duration-100"
       >
-        <h2 class="font-semibold text-[3rem] tracking-wider mb-4">PLAYER 1</h2>
-        <p class="text-[5rem] text-blue-900 mb-30">0</p>
+        <h2
+          class="player-0-title font-semibold text-[3rem] tracking-wider mb-4"
+        >
+          PLAYER 1
+        </h2>
+        <p id="score--0" class="text-[5rem] text-blue-900 mb-30">0</p>
 
         <div
           class="flex flex-col items-center justify-evenly w-52 h-[7.52rem] bg-blue-900 rounded-[9px] p-6 text-white tracking-widest"
         >
           <p class="text-[1.3rem]">CURRENT</p>
-          <p class="font-semibold text-[2rem]">0</p>
+          <p class="current--0 font-semibold text-[2rem]">0</p>
         </div>
       </section>
 
       <!-- Plater 1 Panel -->
-      <section class="flex flex-col items-center w-[50%] p-[5.62rem]">
-        <h2 class="text-[3rem] tracking-wider mb-4">PLAYER 2</h2>
-        <p class="text-[5rem] text-blue-900 mb-30">0</p>
+      <section
+        id="player-1"
+        class="flex flex-col items-center w-[50%] p-[5.62rem] transition duration-100"
+      >
+        <h2 class="player-1-title text-[3rem] tracking-wider mb-4">PLAYER 2</h2>
+        <p id="score--1" class="text-[5rem] text-blue-900 mb-30">0</p>
 
         <div
           class="flex flex-col items-center justify-evenly w-52 h-[7.52rem] bg-blue-900 rounded-[9px] p-6 text-white tracking-widest"
         >
           <p class="text-[1.3rem]">CURRENT</p>
-          <p class="font-semibold text-[2rem]">0</p>
+          <p class="current--1 font-semibold text-[2rem]">0</p>
         </div>
       </section>
 
-      <!-- Buttons -->
+      <!-- Buttons / Dice image -->
       <section class="flex flex-col items-center">
         <button
           id="new-btn"
@@ -67,6 +75,13 @@
         >
           📝 RULES
         </button>
+
+        <img
+          src="images/dice-1.png"
+          alt="Dice Number"
+          id="dice-image"
+          class="hidden absolute top-[40%] left-[45%] size-24"
+        />
 
         <button
           id="roll-btn"
@@ -90,10 +105,10 @@
       class="hidden absolute z-10 bg-black/50 w-screen h-screen"
     ></div>
 
-    <!-- "RULES" Button modal window-->
+    <!-- "RULES" Button - Modal Window-->
     <aside
       id="rules-modal"
-      class="absolute z-20 top-40 w-180 h-137 bg-white flex flex-col gap-6 px-5 py-3 font-mono text-[#444] rounded-2xl invisible"
+      class="absolute z-20 top-40 w-185 h-137 bg-white flex flex-col gap-6 px-5 py-3 font-mono text-[#444] rounded-2xl invisible"
     >
       <button
         id="modal-close-btn"
@@ -102,7 +117,7 @@
         X
       </button>
 
-      <h1 class="text-[1.35rem] uppercase tracking-wide">
+      <h1 class="text-[1.35rem] uppercase tracking-wide -mt-5">
         Welcome to the <span class="font-bold">"Pick Game"</span>!
       </h1>
 
