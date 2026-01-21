@@ -104,7 +104,7 @@ holdBtn.addEventListener(`click`, function () {
 
     // Player Score >= 100
     // Player win
-    if (scores[activePlayer] >= 20) {
+    if (scores[activePlayer] >= 100) {
       playingStatus = false;
       document.querySelector(`.current--${activePlayer}`).textContent = 0;
       document
