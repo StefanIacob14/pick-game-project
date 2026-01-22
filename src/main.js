@@ -81,7 +81,7 @@ rollBtn.addEventListener(`click`, function () {
 
     // Dice Image
     dice.classList.remove(`hidden`);
-    dice.src = `/images/dice-${secretNumber}.png`;
+    dice.src = `/src/assets/images/dice-${secretNumber}.png`;
 
     // Current Tab Score
     if (secretNumber !== 1) {
