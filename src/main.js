@@ -1,7 +1,7 @@
 "use strict";
 
 // Import images from "src" folder
-const diceImages = import.meta.glob(`./assets/images/dice-*.png`, {
+const diceImages = import.meta.glob(`/src/assets/images/dice-*.png`, {
   eager: true,
   import: `default`,
 });
@@ -87,7 +87,7 @@ rollBtn.addEventListener(`click`, function () {
 
     // Dice Image
     dice.classList.remove(`hidden`);
-    dice.src = diceImages[`./assets/images/dice-${secretNumber}.png`];
+    dice.src = diceImages[`/src/assets/images/dice-${secretNumber}.png`];
 
     // Current Tab Score
     if (secretNumber !== 1) {
