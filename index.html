@@ -24,7 +24,7 @@
     <main
       class="relative w-248 h-150 bg-white/35 shadow-2xl rounded-[9px] flex overflow-hidden"
     >
-      <!-- Player 0 Panel-->
+      <!-- Player 0 Panel -->
       <section
         id="player-0"
         class="flex flex-col items-center bg-white/40 w-[50%] p-[5.62rem] transition duration-100"
@@ -64,16 +64,61 @@
       <section class="flex flex-col items-center">
         <button
           id="new-btn"
-          class="absolute top-6 left-[41%] text-[#444] bg-white/70 px-8 py-[0.7rem] shadow-md rounded-3xl cursor-pointer transition-all active:translate-y-1 duration-100 ease-in"
+          class="absolute top-6 left-[40.6%] text-[#444] bg-white/80 px-8 py-[0.7rem] shadow-md rounded-3xl cursor-pointer transition-all active:translate-y-1 duration-100 ease-in"
         >
           🔁 NEW GAME
         </button>
 
         <button
           id="rules-btn"
-          class="absolute top-22 left-[42.5%] text-[#444] bg-white/70 px-8 py-[0.7rem] shadow-md rounded-3xl cursor-pointer transition-all active:translate-y-1 duration-100 ease-in"
+          class="absolute top-22 left-[42.5%] text-[#444] bg-white/80 px-8 py-[0.7rem] shadow-md rounded-3xl cursor-pointer transition-all active:translate-y-1 duration-100 ease-in"
         >
           📝 RULES
+        </button>
+
+        <!-- Max Score Modal Window -->
+        <section
+          id="max-score-modal"
+          class="scale-y-0 absolute top-48 left-[45.2%] text-[#444] bg-white/80 px-4 pb-2 pt-1 rounded-b-3xl origin-top transition-all duration-150 ease-in"
+        >
+          <ul class="flex flex-col items-center">
+            <li>
+              <button
+                id="max-score-25"
+                class="cursor-pointer w-15 border-b border-b-black/10 py-1"
+              >
+                25
+              </button>
+            </li>
+            <li>
+              <button
+                id="max-score-50"
+                class="cursor-pointer w-15 border-b border-b-black/10 py-1"
+              >
+                50
+              </button>
+            </li>
+            <li>
+              <button
+                id="max-score-75"
+                class="cursor-pointer w-15 border-b border-b-black/10 py-1"
+              >
+                75
+              </button>
+            </li>
+            <li>
+              <button id="max-score-100" class="cursor-pointer py-1">
+                100
+              </button>
+            </li>
+          </ul>
+        </section>
+
+        <button
+          id="max-score-btn"
+          class="absolute top-38 left-[43.5%] text-[#444] bg-white/80 px-5 py-2 shadow-md rounded-3xl cursor-pointer transition-all active:inset-shadow-sm active:inset-shadow-black/15"
+        >
+          🏆 Score ▾
         </button>
 
         <img
@@ -84,14 +129,14 @@
 
         <button
           id="roll-btn"
-          class="absolute bottom-32 left-[41%] text-[#444] bg-white/70 px-8 py-[0.7rem] shadow-md rounded-3xl cursor-pointer transition-all active:translate-y-1 duration-100 ease-in"
+          class="absolute bottom-32 left-[41%] text-[#444] bg-white/80 px-8 py-[0.7rem] shadow-md rounded-3xl cursor-pointer transition-all active:translate-y-1 duration-100 ease-in"
         >
           🎲 ROLL DICE
         </button>
 
         <button
           id="hold-btn"
-          class="absolute bottom-16 left-[43%] text-[#444] bg-white/70 px-8 py-[0.7rem] shadow-md rounded-3xl cursor-pointer transition-all active:translate-y-1 duration-100 ease-in"
+          class="absolute bottom-16 left-[43%] text-[#444] bg-white/80 px-8 py-[0.7rem] shadow-md rounded-3xl cursor-pointer transition-all active:translate-y-1 duration-100 ease-in"
         >
           📥 HOLD
         </button>
@@ -104,7 +149,7 @@
       class="hidden absolute z-10 bg-black/50 w-screen h-screen"
     ></div>
 
-    <!-- "RULES" Button - Modal Window-->
+    <!-- "RULES" Button - Modal Window -->
     <aside
       id="rules-modal"
       class="absolute z-20 top-40 w-190 h-137 bg-white flex flex-col gap-6 px-5 py-3 font-mono text-[#444] rounded-2xl invisible"

@@ -18,8 +18,15 @@ const overlay = document.getElementById(`overlay`);
 const modalWindow = document.getElementById(`rules-modal`);
 const modalCloseBtn = document.getElementById(`modal-close-btn`);
 
+const maxScoreModal = document.getElementById(`max-score-modal`);
+const maxScore25 = document.getElementById(`max-score-25`);
+const maxScore50 = document.getElementById(`max-score-50`);
+const maxScore75 = document.getElementById(`max-score-75`);
+const maxScore100 = document.getElementById(`max-score-100`);
+
 const newBtn = document.getElementById(`new-btn`);
 const rulesBtn = document.getElementById(`rules-btn`);
+const maxScoreBtn = document.getElementById(`max-score-btn`);
 const rollBtn = document.getElementById(`roll-btn`);
 const holdBtn = document.getElementById(`hold-btn`);
 
@@ -48,6 +55,10 @@ const closeModal = function () {
   overlay.classList.add(`hidden`);
 };
 
+const maxScoreCloseModal = function () {
+  maxScoreModal.classList.toggle(`scale-y-0`);
+};
+
 const switchPlayer = function () {
   // Reset the current score
   document.querySelector(`.current--${activePlayer}`).textContent = 0;
@@ -64,6 +75,11 @@ const switchPlayer = function () {
   player1Title.classList.toggle(`font-semibold`);
 };
 
+const maxScoreActiveBtn = function () {
+  maxScoreBtn.classList.toggle(`bg-white/80`);
+  maxScoreBtn.classList.toggle(`bg-white`);
+};
+
 // APPLICATION
 // "NEW" Button
 newBtn.addEventListener(`click`, reloadPage);
@@ -78,8 +94,39 @@ modalCloseBtn.addEventListener(`click`, closeModal);
 // Rules Modal Overlay close
 overlay.addEventListener(`click`, closeModal);
 
+// Max Score Feature
+// Max Score button
+maxScoreBtn.addEventListener(`click`, function () {
+  maxScoreCloseModal();
+  maxScoreActiveBtn();
+});
+
+// Max Score "25" option
+maxScore25.addEventListener(`click`, () => {
+  maxScoreCloseModal();
+});
+
+// Max Score "50" option
+maxScore50.addEventListener(`click`, () => {
+  maxScoreCloseModal();
+});
+
+// Max Score "75" option
+maxScore75.addEventListener(`click`, () => {
+  maxScoreCloseModal();
+});
+
+// Max Score "100" option
+maxScore100.addEventListener(`click`, () => {
+  maxScoreCloseModal();
+});
+
 // "Roll Dice" Button
 rollBtn.addEventListener(`click`, function () {
+  // Winning score button
+  maxScoreBtn.classList.add(`hidden`);
+  maxScoreModal.classList.add(`hidden`);
+
   if (playingStatus) {
     // Secret Number Generator
     const secretNumber = Math.trunc(Math.random() * 6 + 1);
