@@ -143,7 +143,7 @@
 
         <!-- Selected Max Score display -->
         <div
-          class="absolute bottom-4 left-[41.4%] text-[#444] text-[0.8rem] italic bg-white/80 px-5 py-2 shadow-md rounded-3xl pointer-events-none"
+          class="absolute bottom-4.5 left-[41.4%] text-[#444] text-[0.8rem] italic bg-white/80 px-5 py-2 shadow-md rounded-3xl pointer-events-none"
         >
           Max Score:
           <span id="max-score-display" class="font-bold text-[0.9rem]"
@@ -163,7 +163,7 @@
     <!-- "RULES" Button - Modal Window -->
     <aside
       id="rules-modal"
-      class="absolute z-20 top-40 w-190 h-137 bg-white flex flex-col gap-6 px-5 py-3 font-mono text-[#444] rounded-2xl invisible"
+      class="absolute z-20 top-40 w-190 bg-white flex flex-col gap-6 p-5 font-mono text-[#444] rounded-2xl invisible"
     >
       <button
         id="modal-close-btn"
@@ -178,8 +178,8 @@
 
       <p>
         This game was designed to reward the playes's
-        <span class="font-bold italic">best strategy</span> to accumulate the
-        <span class="font-bold italic">💯 maximum score</span>! Only the player
+        <span class="font-bold italic">best strategy</span> to accumulate the 🥇
+        <span class="font-bold italic">maximum score</span>! Only the player
         with the strongest will and tactic shall win the game!
         <span class="font-bold italic">Good Luck</span> 🍀!
       </p>
@@ -190,8 +190,22 @@
 
       <ul class="list-disc list-inside ml-3 leading-8">
         <li>
+          "Pick Game" has a keyboard feature, perfect for the second player:
+          press <span class="font-bold italic uppercase">"ENTER" key</span> to
+          "🎲 ROLL DICE" and
+          <span class="font-bold italic uppercase">"SPACEBAR"</span> to "📥
+          HOLD" de score;
+        </li>
+        <li>
           The first player that starts the game is always
           <span class="font-bold italic uppercase">"Player 1"</span>;
+        </li>
+        <li>
+          Players can
+          <span class="font-bold italic uppercase"
+            >select the maximum score</span
+          >
+          before the game start, by pressing the "🏆 Score ▾" button;
         </li>
         <li>
           Each player will
@@ -211,10 +225,8 @@
           second player can start to play;
         </li>
         <li>
-          First player that reach
-          <span class="font-bold italic uppercase"
-            >100 points win the game</span
-          >
+          First player that reach the selected maximum score
+          <span class="font-bold italic uppercase">win the game</span>
           🏆!
         </li>
       </ul>
