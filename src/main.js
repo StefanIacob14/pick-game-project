@@ -23,6 +23,7 @@ const maxScore25 = document.getElementById(`max-score-25`);
 const maxScore50 = document.getElementById(`max-score-50`);
 const maxScore75 = document.getElementById(`max-score-75`);
 const maxScore100 = document.getElementById(`max-score-100`);
+const maxScoreDisplay = document.getElementById(`max-score-display`);
 
 const newBtn = document.getElementById(`new-btn`);
 const rulesBtn = document.getElementById(`rules-btn`);
@@ -40,6 +41,8 @@ let currentScore = 0;
 
 let scores = [0, 0];
 
+let maxSetScore = 100;
+
 // FUNCTIONS
 const reloadPage = function () {
   window.location.reload();
@@ -53,10 +56,6 @@ const showModal = function () {
 const closeModal = function () {
   modalWindow.classList.add(`invisible`);
   overlay.classList.add(`hidden`);
-};
-
-const maxScoreCloseModal = function () {
-  maxScoreModal.classList.toggle(`scale-y-0`);
 };
 
 const switchPlayer = function () {
@@ -78,6 +77,16 @@ const switchPlayer = function () {
 const maxScoreActiveBtn = function () {
   maxScoreBtn.classList.toggle(`bg-white/80`);
   maxScoreBtn.classList.toggle(`bg-white`);
+};
+
+const maxScoreCloseModal = function () {
+  maxScoreModal.classList.toggle(`scale-y-0`);
+};
+
+const maxScoreBtnBehavior = function () {
+  maxScoreCloseModal();
+  maxScoreActiveBtn();
+  maxScoreDisplay.textContent = maxSetScore;
 };
 
 // APPLICATION
@@ -102,23 +111,27 @@ maxScoreBtn.addEventListener(`click`, function () {
 });
 
 // Max Score "25" option
-maxScore25.addEventListener(`click`, () => {
-  maxScoreCloseModal();
+maxScore25.addEventListener(`click`, function () {
+  maxSetScore = 25;
+  maxScoreBtnBehavior();
 });
 
 // Max Score "50" option
-maxScore50.addEventListener(`click`, () => {
-  maxScoreCloseModal();
+maxScore50.addEventListener(`click`, function () {
+  maxSetScore = 50;
+  maxScoreBtnBehavior();
 });
 
 // Max Score "75" option
-maxScore75.addEventListener(`click`, () => {
-  maxScoreCloseModal();
+maxScore75.addEventListener(`click`, function () {
+  maxSetScore = 75;
+  maxScoreBtnBehavior();
 });
 
 // Max Score "100" option
-maxScore100.addEventListener(`click`, () => {
-  maxScoreCloseModal();
+maxScore100.addEventListener(`click`, function () {
+  maxSetScore = 100;
+  maxScoreBtnBehavior();
 });
 
 // "Roll Dice" Button
@@ -155,9 +168,9 @@ holdBtn.addEventListener(`click`, function () {
     document.getElementById(`score--${activePlayer}`).textContent =
       scores[activePlayer];
 
-    // Player Score >= 100
+    // Player Score >= winning set score
     // Player win
-    if (scores[activePlayer] >= 100) {
+    if (scores[activePlayer] >= maxSetScore) {
       playingStatus = false;
       document.querySelector(`.current--${activePlayer}`).textContent = 0;
       document
@@ -171,7 +184,7 @@ holdBtn.addEventListener(`click`, function () {
         .classList.toggle(`animate-bounce`);
       dice.classList.add(`hidden`);
     } else {
-      // Player Score < 100
+      // Player Score < winning set score
       // Switch the player
       switchPlayer();
     }

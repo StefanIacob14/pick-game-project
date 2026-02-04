@@ -64,14 +64,14 @@
       <section class="flex flex-col items-center">
         <button
           id="new-btn"
-          class="absolute top-6 left-[40.6%] text-[#444] bg-white/80 px-8 py-[0.7rem] shadow-md rounded-3xl cursor-pointer transition-all active:translate-y-1 duration-100 ease-in"
+          class="absolute top-6 left-[41.5%] text-[#444] bg-white/80 px-5.5 py-2.5 shadow-md rounded-3xl cursor-pointer transition-all active:translate-y-1 duration-100 ease-in"
         >
           🔁 NEW GAME
         </button>
 
         <button
           id="rules-btn"
-          class="absolute top-22 left-[42.5%] text-[#444] bg-white/80 px-8 py-[0.7rem] shadow-md rounded-3xl cursor-pointer transition-all active:translate-y-1 duration-100 ease-in"
+          class="absolute top-22 left-[43%] text-[#444] bg-white/80 px-6.5 py-2 shadow-md rounded-3xl cursor-pointer transition-all active:translate-y-1 duration-100 ease-in"
         >
           📝 RULES
         </button>
@@ -79,7 +79,7 @@
         <!-- Max Score Modal Window -->
         <section
           id="max-score-modal"
-          class="scale-y-0 absolute top-48 left-[45.2%] text-[#444] bg-white/80 px-4 pb-2 pt-1 rounded-b-3xl origin-top transition-all duration-150 ease-in"
+          class="scale-y-0 absolute top-47 left-[45.45%] text-[#444] bg-white/80 px-3 py-1 rounded-b-3xl origin-top transition-all duration-150 ease-in"
         >
           <ul class="flex flex-col items-center">
             <li>
@@ -116,7 +116,7 @@
 
         <button
           id="max-score-btn"
-          class="absolute top-38 left-[43.5%] text-[#444] bg-white/80 px-5 py-2 shadow-md rounded-3xl cursor-pointer transition-all active:inset-shadow-sm active:inset-shadow-black/15"
+          class="absolute top-37 left-[43.8%] text-[#444] bg-white/80 px-4 py-2 shadow-md rounded-3xl cursor-pointer transition-all active:inset-shadow-sm active:inset-shadow-black/15"
         >
           🏆 Score ▾
         </button>
@@ -129,17 +129,28 @@
 
         <button
           id="roll-btn"
-          class="absolute bottom-32 left-[41%] text-[#444] bg-white/80 px-8 py-[0.7rem] shadow-md rounded-3xl cursor-pointer transition-all active:translate-y-1 duration-100 ease-in"
+          class="absolute bottom-34 left-[41.8%] text-[#444] bg-white/80 px-6 py-2.5 shadow-md rounded-3xl cursor-pointer transition-all active:translate-y-1 duration-100 ease-in"
         >
           🎲 ROLL DICE
         </button>
 
         <button
           id="hold-btn"
-          class="absolute bottom-16 left-[43%] text-[#444] bg-white/80 px-8 py-[0.7rem] shadow-md rounded-3xl cursor-pointer transition-all active:translate-y-1 duration-100 ease-in"
+          class="absolute bottom-19 left-[43.6%] text-[#444] bg-white/80 px-6.5 py-2 shadow-md rounded-3xl cursor-pointer transition-all active:translate-y-1 duration-100 ease-in"
         >
           📥 HOLD
         </button>
+
+        <!-- Selected Max Score display -->
+        <div
+          class="absolute bottom-4 left-[41.4%] text-[#444] text-[0.8rem] italic bg-white/80 px-5 py-2 shadow-md rounded-3xl pointer-events-none"
+        >
+          Max Score:
+          <span id="max-score-display" class="font-bold text-[0.9rem]"
+            >100</span
+          >
+          points
+        </div>
       </section>
     </main>
 
