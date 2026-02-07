@@ -11,12 +11,12 @@
 
 # 🧐 Overview
 
-**Pick Game** is a strategic browser-based game where two players compete to reach the maximum score. While this is based on the classic "Pig Game" mechanics, I re-engineered the project to focus on **modern development tooling** (Vite) and **accessibility**. I wanted to create a seamless local multiplayer experience, where players aren't fighting over the mouse, so I implemented dual-input controls (Keyboard & Mouse).
+**Pick Game** is a strategic browser-based game where two players compete to reach the maximum score. While this is based on the classic "Pig Game" mechanics, I re-engineered the project to focus on **MODERN DEVELOPMENT TOOLING** (Vite) and **ACCESSIBILITY**. I wanted to create a seamless local multiplayer experience, where players aren't fighting over the mouse, so I implemented **DUAL-INPUT CONTROLS (Keyboard & Mouse)**.
 
 ## 🛠 Tech Stack
 
 - **Build Tool:** [Vite](https://vitejs.dev/) - Chosen for its lightning-fast HMR (Hot Module Replacement) and optimized build process, compared to standard CRA.
-- **Core:** [Vanilla JavaScript (ES6+)] - No framework, just pure logic and DOM Manipulation.
+- **Core:** [Vanilla JavaScript (ES6+)](https://javascript.info/) - No framework, just pure logic and DOM Manipulation.
 - **Styling:** [Tailwind CSS](https://tailwindcss.com/) - Used for rapid, utility-first styling to create a clean UI.
 - **Markup:** [HTML5]
 
@@ -24,7 +24,7 @@
 
 - **🕹 Dual Control Support:** Unique to this version, Player 1 and Player 2 can play simultaneously, using keyboard shortcuts (there's no need to pass the mouse anymore).
 - **📖 Build-in Rules Modal:** A clean overlay explanation for new players.
-- **🥇 Option to choose the winning score:** Players have the option to choose the maximum score for the round, before the game actually start. They can choose from 4 options: 25, 50, 75 and 100 points.
+- **🥇 Option to choose the winning score:** Players have the option to choose the maximum score for the round, before the game actually starts. They can choose from the options: 25, 50, 75 and 100 points.
 - **🏆 Victory State:** A dedicated winning screen triggers visual cues and a specific state where players can't interact with the main buttons anymore.
 - **⚡ Instant Reset:** The game state can be re-initialized immediately, without reloading the page.
 
