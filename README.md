@@ -2,7 +2,7 @@
 
 > A modern, interactive 2-player dice game built with Vanilla JavaScript and Tailwind CSS.
 
-![Project Screenshot](insert-your-screenshot-path-here.png)
+!["Pick Game" Demo](/public/assets/gameplay.gif)
 
 ## 🔗 Links
 
