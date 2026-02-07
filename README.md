@@ -78,4 +78,4 @@ Since this project uses **Vite**, the setup is slightly different than a standar
 
 # 👤 Contact
 
-Stefan-Bogdan IACOB - [LinkedIn](https://www.linkedin.com/in/stefan-bogdan-iacob-512ba5222/) - 📧 Email: biacob973@gmail.com
+**Stefan-Bogdan IACOB** - [LinkedIn](https://www.linkedin.com/in/stefan-bogdan-iacob/) - 📧 Email: biacob973@gmail.com
