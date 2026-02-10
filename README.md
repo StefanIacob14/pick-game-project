@@ -6,7 +6,7 @@
 
 ## 🔗 Links
 
-- **🔴 Live Demo:** [https://app.netlify.com/projects/pick-game-project/overview]
+- **🔴 Live Demo:** [https://pick-game-project.vercel.app]
 - **📂 Repository:** [https://github.com/StefanIacob14/pick-game-project]
 
 # 🧐 Overview
